@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero">
+        <h1>E-book Landing</h1>
+
+        <div class="d-img d-img-hero">
+            <picture>
+                <source media="(max-width: 280px)" srcset="img/book-120.png" type="image/png">
+
+                <source media="(max-width: 340px)" srcset="img/book-150.png" type="image/png">
+
+                <source media="(max-width: 1100px)" srcset="img/book-200.png" type="image/png">
+
+                <source media="(max-width: 1300px)" srcset="img/book-300.png" type="image/png">
+
+                <img src="img/book-350.png" alt="book cover design">
+            </picture>
+            <p>Designed by <a href="www.freepik.com">Freepik</a></p>
+        </div>
+
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate earum assumenda reiciendis unde? Illo, ad ducimus, numquam hic unde sit consequuntur dese.</p>
+
+        <div class="d-download">
+            <a href="#footer">Download</a>
+        </div>
+    </section>
+    <article>
+        <h2>About the <br>e-book</h2>
+
+        <div class="d-img d-img-art">
+            <picture>
+                <source media="(max-width: 280px)" srcset="img/book-120.png" type="image/png">
+
+                <source media="(max-width: 340px)" srcset="img/book-150.png" type="image/png">
+
+                <source media="(max-width: 1030px)" srcset="img/book-200.png" type="image/png">
+
+                <img src="img/book-300.png" alt="book cover design">
+            </picture>
+        </div>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ratione quae, minima illo id, aperiam ipsa eaque iste aut, doloribus magni in necessitatibus et sint? Quia vero esse et explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eveniet tempora voluptates. Adipisci id officiis unde vero dolor ipsam nam, voluptate, quibusdam ipsa quasi optio atque obcaecati temporibus, consequatur nihil!</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sapiente veritatis iste voluptate. Repellat neque hic illum ratione commodi cupiditate quod, rem, voluptates libero labore suscipit minus reprehenderit culpa qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus praesentium libero quo! Animi possimus aperiam voluptatibus iure deserunt architecto tempora enim nostrum, ratione repudiandae dolores aliquid. Culpa sequi soluta recusandae.</p>
+    </article>
+    <footer id="footer">
+        <h2>
+            Baixe seu e-book
+        </h2>
+        <p>Preencha o formulário e clique em "Download" para receber seu e-book gratuito.</p>
+
+        <form>
+            <label for="inname">Nome:</label>
+            <input type="text" name="inname" id="inname">
+
+            <label for="inmail">E-mail:</label>
+            <input type="mail" name="inmail" id="inmail">
+
+            <div class="d-download d-down-form">
+                <input type="submit" value="Download" class="button-submit">
+            </div>
+        </form>
+    </footer>
+
+    <script>
+        let btnDown = document.querySelectorAll('.d-download');
+
+        btnDown.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('active');
+
+                setTimeout(() => {
+                    btn.classList.remove('active');
+                }, 100)
+            })
+            
+            btn.addEventListener('mousemove', () => {
+                btn.classList.add('active');
+            })  
+
+            btn.addEventListener('mouseout', () => {
+                btn.classList.remove('active');
+            })  
+        })
+    </script>
+</body>
+</html>
